@@ -1,0 +1,48 @@
+12.03.20 10:44.52.302|(TLM) (00001DF4) (TM).startSession begin...
+12.03.20 10:44.52.302|(TLM) (00001DF4) TlmModule Version: 1.0.61.1
+12.03.20 10:44.52.302|(TLM) (00001DF4) (TM).getSessionAttribute
+12.03.20 10:44.52.302|(TLM) (00001DF4) (TM).getSessionAttribute
+12.03.20 10:44.52.302|(TLM) (00001DF4) (TM).getSessionAttribute
+12.03.20 10:44.52.302|(TLM) (00001DF4) (TM).startSession(BLE_DONGLE)
+12.03.20 10:44.52.307|(TLM) (00001B44) (TM).getSessionAttribute
+12.03.20 10:44.52.307|(TLM) (00001B44) BleDongleCmdFactory::startSession begin...
+12.03.20 10:44.52.307|(TLM) (00001B44) BleDongleCmdFactory::startSession COM7
+12.03.20 10:44.52.310|(TLM) (00001B44) (TM).getSessionAttribute
+12.03.20 10:44.52.310|(TLM) (00001B44) TX => [ 00 00 06 04 ]
+12.03.20 10:44.52.310|(TLM) (00002304) RX <= [ 80 05 00 07 | 00 01 09 00 00 ]
+12.03.20 10:44.52.311|(TLM) (00002304) RX <= [ 00 02 06 04 | 08 00 ]
+12.03.20 10:44.52.311|(TLM) (00001B44) TX => [ 00 01 03 00 | 00 ]
+12.03.20 10:44.52.326|(TLM) (00002304) RX <= [ 00 03 03 00 | 00 02 30 ]
+12.03.20 10:44.52.326|(TLM) (00001B44) TX => [ 00 00 00 08 ]
+12.03.20 10:44.52.341|(TLM) (00002304) RX <= [ 00 1D 00 08 | 01 00 09 00 00 00 00 00 AE 00 00 34 00 1F A3 07 00 00 05 01 00 13 14 04 0D 30 43 41 41 ]
+12.03.20 10:44.52.341|(TLM) (00002304) Dongle Application Type: BLE Application
+12.03.20 10:44.52.341|(TLM) (00002304) Nordic Dongle Information: 
+					Serial Number = 500511
+					Firmware Version = AbbottBLEDongle_1.9.0.0
+					Hardware Revision = 0.1.5.0
+					BLE Chip Revision = AAC0
+					Date = 4/13/2019 
+12.03.20 10:44.52.341|(TLM) (00001B44) BleDongleCmdFactory::startSession(Success) end...
+12.03.20 10:44.52.341|(TLM) (00001DF4) (TM).processStateEvent
+12.03.20 10:44.52.341|(TLM) (00001DF4) TlmModuleManager: State Transition TlmModuleManagerOutOfService(IS_Event) --> TlmModuleManagerInService
+12.03.20 10:44.52.341|(TLM) (00001DF4) (TM).stateChanged preState(TlmModuleManagerOutOfService) curState(TlmModuleManagerInService) begin...
+12.03.20 10:44.52.341|(TLM) (00001DF4) stateChanged end...
+12.03.20 10:44.52.341|(TLM) (00001DF4) (TM).startSession(Success) end...
+12.03.20 10:44.52.341|(TLM) (00001DF4) (BleDongle).setDelegate begin...
+12.03.20 10:44.52.341|(TLM) (00001DF4) (TM).setTlmModuleDelegate begin...
+12.03.20 10:44.52.341|(TLM) (00001DF4) (TM).setTlmModuleDelegate(Success) end...
+12.03.20 10:44.52.342|(TLM) (00001DF4) (BleDongle).setDelegate(Success) end...
+12.03.20 10:44.52.351|(TLM) (00001DF4) (TM).endSession begin...
+12.03.20 10:44.52.351|(TLM) (00001DF4) (TM).endSession(BleDongle)
+12.03.20 10:44.52.352|(TLM) (00001B44) BleDongleCmdFactory::endSession
+12.03.20 10:44.52.352|(TLM) (00001B44) TX => [ 00 00 06 04 ]
+12.03.20 10:44.52.357|(TLM) (00002304) RX <= [ 00 02 06 04 | 08 00 ]
+12.03.20 10:44.52.357|(TLM) (00001B44) TX => [ 00 01 03 00 | 00 ]
+12.03.20 10:44.52.373|(TLM) (00002304) RX <= [ 00 03 03 00 | 00 02 30 ]
+12.03.20 10:44.52.387|(TLM) (00001DF4) (TM).processStateEvent
+12.03.20 10:44.52.388|(TLM) (00001DF4) TlmModuleManager: State Transition TlmModuleManagerInService(OOS_Event) --> TlmModuleManagerOutOfService
+12.03.20 10:44.52.388|(TLM) (00001DF4) TlmModuleMgr::trans_oos
+12.03.20 10:44.52.388|(TLM) (00001DF4) (TM).stateChanged preState(TlmModuleManagerInService) curState(TlmModuleManagerOutOfService) begin...
+12.03.20 10:44.52.388|(TLM) (00001DF4) stateChanged end...
+12.03.20 10:44.52.388|(TLM) (00001DF4) (TM).endSession(Success) end...
+12.03.20 10:44.52.388|(TLM) (00001C90) (TmrKeepAlive).exiting complete
