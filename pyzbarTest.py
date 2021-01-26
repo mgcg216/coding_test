@@ -5,7 +5,7 @@ import argparse
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 while(True):
     # Capture frame-by-frame
@@ -32,6 +32,7 @@ while(True):
         elif crop is False:
             cropArr = 0
         if resize is True:
+            scale_percent = 30
             width = int(frame.shape[1] * scale_percent / 100)
             height = int(frame.shape[0] * scale_percent / 100)
             dim = (width, height)
@@ -52,7 +53,7 @@ while(True):
             # (thresh, frame) = cv2.threshold(frame, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
         if bw is True:
-            (thresh, frame) = cv2.threshold(frame, 100, 255, cv2.THRESH_BINARY)
+            (thresh, frame) = cv2.threshold(frame, 175, 255, cv2.THRESH_BINARY)
         if gaus3 is True:
             frame = cv2.GaussianBlur(frame, (3, 3), 0)
         if gaus5 is True:
@@ -65,13 +66,13 @@ while(True):
         return frame, cropArr
 
     filteredFrame, cropArr = \
-        lets_filter(frame, crop=True, gray=True, adaptive=True, bw=False, gaus3=False, sharp=False)
+        lets_filter(frame, crop=False, resize=True, adaptive=False, bw=True, gaus3=False, sharp=False)
 
     # for i in range(3):
     #     frame[cropArr[1]:cropArr[3], cropArr[0]:cropArr[2], i] = filteredFrame
 
-    image = frame
-    barcodes = pyzbar.decode(frame)
+    image = filteredFrame
+    barcodes = pyzbar.decode(image)
 
 
     # loop over the detected barcodes
@@ -92,7 +93,7 @@ while(True):
 
 
     # Display the resulting frame
-    cv2.imshow('frame',frame)
+    cv2.imshow('frame',image)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

@@ -1,7 +1,7 @@
 import cv2
-
+droidcam = "http://100.81.42.151:4747"
 def video_reader():
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(2)
     detector = cv2.QRCodeDetector()  #QRCode detector
     while True:
         _, img = cam.read()
